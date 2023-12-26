@@ -2,6 +2,8 @@ package com.project.shop.domain;
 
 public class Order {
 
+    private Long id;
+
     private String uuid;
 
     private String identifier;
@@ -10,9 +12,18 @@ public class Order {
     public Order() {
     }
 
-    public Order(String uuid, String identifier) {
+    public Order(Long id, String uuid, String identifier) {
+        this.id = id;
         this.uuid = uuid;
         this.identifier = identifier;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUuid() {

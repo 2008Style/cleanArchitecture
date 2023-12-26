@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Purchase")
-public class Purchase {
+public class Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Purchase {
     @Column(name = "Identifier")
     private String identifier;
 
-    public Purchase() {
+    public Invoice() {
     }
 
     public Long getId() {

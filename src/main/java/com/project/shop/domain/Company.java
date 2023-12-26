@@ -2,6 +2,8 @@ package com.project.shop.domain;
 
 public class Company {
 
+    private Long id;
+
     private String uuid;
 
     private String name;
@@ -9,7 +11,8 @@ public class Company {
     public Company() {
     }
 
-    public Company(String uuid, String name) {
+    public Company(Long id, String uuid, String name) {
+        this.id = id;
         this.uuid = uuid;
         this.name = name;
     }
@@ -28,5 +31,13 @@ public class Company {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

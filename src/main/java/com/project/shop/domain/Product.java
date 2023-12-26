@@ -2,6 +2,8 @@ package com.project.shop.domain;
 
 public class Product {
 
+    private Long id;
+
     private String uuid;
 
     private String name;
@@ -26,6 +28,23 @@ public class Product {
 
 
     public Product() {
+    }
+
+    public Product(Long id, String uuid, String name, String description, Double price, Double rating) {
+        this.id = id;
+        this.uuid = uuid;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.rating = rating;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUuid() {
